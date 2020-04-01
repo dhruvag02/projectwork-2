@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<h2>Profile Page</h2>
+<div>
+    <p>Your account details are below:</p>
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>{{ account['password'] }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+    </table>
+</div>
+<p><a href="{{ url_for('details') }}" ><button class="btn btn-outline-secondary btn-lg" style="border:1px solid #6ab446;
+        background:/*#228b22*/#6ab446;
+        border-radius: 0;
+        color:#fff;">Proceed</button></a></p>
+{% endblock %}
